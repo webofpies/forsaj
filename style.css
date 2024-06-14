@@ -15,20 +15,22 @@ a {
 }
 
 nav a {
-  color: #fea900;
+  color: #fff;
   padding: 0.8rem 1.6rem;
   clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
   width: 150px;
 }
 
 nav a:hover {
-  color: #fff;
-  background-color: #fea900;
+  color: #fea900;
+  background-color: #fff;
   /* transform: scale(1.1); */
 }
 
 nav li {
   text-align: center;
+  background-color: #fea900;
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
 }
 
 ul {
