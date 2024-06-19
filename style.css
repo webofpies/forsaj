@@ -190,20 +190,20 @@ section {
 /* ROOMS */
 .rooms-box {
   overflow: hidden;
-  max-width: 160rem;
+  max-width: 140rem;
   margin: 0 auto;
 }
 
 .room {
-  max-width: 160rem;
-  height: 80rem;
+  max-width: auto;
+  height: 70rem;
 }
 
 .rooms-container {
   display: flex;
   white-space: nowrap;
   width: max-content;
-  transition: transform 0.5s linear;
+  transition: transform 0.5s ease-in-out;
 }
 
 .room-btn {
@@ -222,12 +222,12 @@ section {
 }
 
 .prev-room-btn {
-  left: 0;
+  left: 15rem;
   background-image: url("icons/prev.svg");
 }
 
 .next-room-btn {
-  right: 0;
+  right: 15rem;
   background-image: url("icons/next.svg");
 }
 
