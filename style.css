@@ -218,11 +218,13 @@ section {
 .room-text {
   position: absolute;
   left: 50%;
-  bottom: 5rem;
-  color: white;
+  bottom: 0;
+  color: var(--white);
+  background-color: #0f0f0f80;
+  padding: 2.5rem 4rem 3rem 4rem;
   transform: translate(-50%, 0);
   font-size: 3rem;
-  width: 100rem;
+  width: 100%;
   white-space: wrap;
 }
 
@@ -257,18 +259,18 @@ section {
 
 /* WATCH */
 .movies-container > div {
-  padding: 7rem 8rem;
-  background: linear-gradient(90deg, var(--dark-color) 40%, rgba(255, 255, 255, 0) 100%),
+  padding: 16rem 12rem;
+  background: linear-gradient(90deg, var(--dark-color) 40%, rgba(0, 0, 0, 0) 100%),
     url("images/movies.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .movies-text {
-  overflow-wrap: break-word;
-  inline-size: 60%;
-  font-size: 2.5rem;
+  inline-size: 40%;
+  font-size: 3rem;
   color: var(--white);
+  line-height: 1.5;
 }
 
 /* CONTACT FORM */
