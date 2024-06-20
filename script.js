@@ -52,9 +52,31 @@ const games = [
   { sn: "cyberpunk", ln: "Cyberpunk 2077" },
 ];
 
-let pct = 0;
+// game cards
 const size = Math.ceil(games.length / 3);
 const gamesRows = Array.from({ length: 3 }, (_, i) => games.slice(i * size, i * size + size));
+
+gamesRows.forEach((row) => {
+  const list = document.createElement("ul");
+  list.classList.add("games-row");
+  gamesContainer.appendChild(list);
+
+  row.forEach((game, i) => {
+    const li = document.createElement("li");
+    const img = document.createElement("img");
+    li.appendChild(img);
+    li.classList.add("game");
+
+    img.src = `images/games/${game.sn}.jpg`;
+    img.alt = game.ln;
+    img.title = game.ln;
+
+    list.appendChild(li);
+  });
+});
+
+// rooms
+let pct = 0;
 
 nextRoomBtn.addEventListener("click", () => {
   pct += 25;
@@ -66,21 +88,33 @@ prevRoomBtn.addEventListener("click", () => {
   roomsCont.style.transform = `translateX(-${pct}%)`;
 });
 
-gamesRows.forEach((row) => {
-  const flexContainer = document.createElement("ul");
-  flexContainer.classList.add("games-row");
-  gamesContainer.appendChild(flexContainer);
+const roomTexts = [
+  `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nesciunt illo
+                cum dolores commodi, sapiente, ex rerum odit rem quam non eveniet culpa magnam
+                expedita modi quis possimus iusto repellendus.`,
+  `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nesciunt illo
+                cum dolores commodi, sapiente, ex rerum odit rem quam non eveniet culpa magnam
+                expedita modi quis possimus iusto repellendus.`,
+  `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nesciunt illo
+                cum dolores commodi, sapiente, ex rerum odit rem quam non eveniet culpa magnam
+                expedita modi quis possimus iusto repellendus.`,
+  `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, nesciunt illo
+                cum dolores commodi, sapiente, ex rerum odit rem quam non eveniet culpa magnam
+                expedita modi quis possimus iusto repellendus.`,
+];
 
-  row.forEach((game, i) => {
-    const div = document.createElement("li");
-    const img = document.createElement("img");
-    div.appendChild(img);
-    div.classList.add("game");
+roomTexts.forEach((text, ind) => {
+  const cont = document.createElement("div");
+  const img = document.createElement("img");
+  const txt = document.createElement("p");
+  cont.append(img, txt);
+  cont.classList.add("room-container");
+  img.classList.add("room");
+  txt.classList.add("room-text");
+  txt.textContent = text;
 
-    img.src = `images/games/${game.sn}.jpg`;
-    img.alt = game.ln;
-    img.title = game.ln;
+  img.src = `images/rooms/${ind + 1}.png`;
+  img.title = text;
 
-    flexContainer.appendChild(div);
-  });
+  roomsCont.appendChild(cont);
 });

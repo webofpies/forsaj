@@ -194,16 +194,31 @@ section {
   margin: 0 auto;
 }
 
-.room {
-  max-width: auto;
-  height: 70rem;
-}
-
 .rooms-container {
   display: flex;
   white-space: nowrap;
   width: max-content;
   transition: transform 0.5s ease-in-out;
+}
+
+.room-container {
+  position: relative;
+}
+
+.room {
+  max-width: auto;
+  height: 70rem;
+}
+
+.room-text {
+  position: absolute;
+  left: 50%;
+  bottom: 5rem;
+  color: white;
+  transform: translate(-50%, 0);
+  font-size: 3rem;
+  width: 100rem;
+  white-space: wrap;
 }
 
 .room-btn {
