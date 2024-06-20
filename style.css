@@ -194,14 +194,14 @@ section {
   margin: 0 auto;
 }
 
-.rooms-container {
+.rooms-list {
   display: flex;
   white-space: nowrap;
   width: max-content;
   transition: transform 0.5s ease-in-out;
 }
 
-.room-container {
+.room-li {
   position: relative;
 }
 

@@ -1,6 +1,6 @@
 const prevRoomBtn = document.querySelector(".prev-room-btn");
 const nextRoomBtn = document.querySelector(".next-room-btn");
-const roomsCont = document.querySelector(".rooms-container");
+const roomsList = document.querySelector(".rooms-list");
 const gamesContainer = document.querySelector(".games-container");
 
 const games = [
@@ -57,11 +57,12 @@ const size = Math.ceil(games.length / 3);
 const gamesRows = Array.from({ length: 3 }, (_, i) => games.slice(i * size, i * size + size));
 
 gamesRows.forEach((row) => {
+  const fragment = document.createDocumentFragment();
   const list = document.createElement("ul");
   list.classList.add("games-row");
   gamesContainer.appendChild(list);
 
-  row.forEach((game, i) => {
+  row.forEach((game) => {
     const li = document.createElement("li");
     const img = document.createElement("img");
     li.appendChild(img);
@@ -71,8 +72,10 @@ gamesRows.forEach((row) => {
     img.alt = game.ln;
     img.title = game.ln;
 
-    list.appendChild(li);
+    fragment.appendChild(li);
   });
+
+  list.appendChild(fragment);
 });
 
 // rooms
@@ -80,12 +83,12 @@ let pct = 0;
 
 nextRoomBtn.addEventListener("click", () => {
   pct += 25;
-  roomsCont.style.transform = `translateX(-${pct}%)`;
+  roomsList.style.transform = `translateX(-${pct}%)`;
 });
 
 prevRoomBtn.addEventListener("click", () => {
   pct -= 25;
-  roomsCont.style.transform = `translateX(-${pct}%)`;
+  roomsList.style.transform = `translateX(-${pct}%)`;
 });
 
 const roomTexts = [
@@ -103,18 +106,20 @@ const roomTexts = [
                 expedita modi quis possimus iusto repellendus.`,
 ];
 
+const roomsFragment = document.createDocumentFragment();
 roomTexts.forEach((text, ind) => {
-  const cont = document.createElement("div");
+  const li = document.createElement("li");
   const img = document.createElement("img");
   const txt = document.createElement("p");
-  cont.append(img, txt);
-  cont.classList.add("room-container");
+  li.append(img, txt);
+  li.classList.add("room-li");
   img.classList.add("room");
   txt.classList.add("room-text");
   txt.textContent = text;
 
   img.src = `images/rooms/${ind + 1}.png`;
-  img.title = text;
 
-  roomsCont.appendChild(cont);
+  roomsFragment.appendChild(li);
 });
+
+roomsList.appendChild(roomsFragment);
