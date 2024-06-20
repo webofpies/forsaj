@@ -5,12 +5,11 @@
 }
 
 :root {
-  /* --main-color: #fea900; */
   --main-color: #fab005;
   --dark-color: #0f0f0f;
-  /* --light-color: #e6e6e6; */
   --light-color: #101010;
   --red: #dd0023;
+  --white: #d5d5d5;
 }
 
 main {
@@ -60,7 +59,7 @@ header {
 }
 
 header:has(.nav-list:hover) {
-  border-color: #dd0023;
+  border-color: var(--red);
 }
 
 header .logo {
@@ -81,7 +80,7 @@ nav {
   width: 12rem;
   height: 100%;
   padding: 1.6rem 1.6rem;
-  /* color: inherit; */
+  color: inherit;
   transform: skew(10deg);
 }
 
@@ -103,7 +102,7 @@ nav {
 }
 
 .nav-li:hover {
-  color: #d5d5d5;
+  color: var(--white);
   box-shadow: inset 0 -150px 0 0 var(--red);
 }
 
@@ -112,7 +111,7 @@ video {
   display: block;
   width: 100%;
   max-height: calc(100vh - 9.6rem);
-  background: #000;
+  background: var(--dark-color);
 }
 
 /* SECTION */
@@ -139,7 +138,7 @@ section {
 /* GAMES */
 #games {
   overflow-x: clip;
-  background: linear-gradient(#000 0%, rgba(3, 3, 3, 0) 20%);
+  background: linear-gradient(#000 0%, var(--dark-color) 20%);
 }
 
 .games-row {
@@ -151,11 +150,17 @@ section {
 .games-overlay {
   position: absolute;
   width: 100%;
-  height: calc(100% + 15px);
+  height: 100%;
 
-  background: linear-gradient(90deg, #000 0%, rgba(3, 3, 3, 0) 30%, #e6e6e600 70%, #000);
+  background: linear-gradient(
+    90deg,
+    var(--dark-color) 0%,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 70%,
+    var(--dark-color)
+  );
 
-  box-shadow: 0 0px 47px 0px #000;
+  box-shadow: 0 0px 47px 0px var(--dark-color);
   z-index: 111;
   top: 0;
   left: 0;
@@ -263,7 +268,7 @@ section {
   overflow-wrap: break-word;
   inline-size: 60%;
   font-size: 2.5rem;
-  color: #c6c6c6;
+  color: var(--white);
 }
 
 /* CONTACT FORM */
@@ -296,7 +301,7 @@ section {
 .contact-us-btn:hover {
   background-color: var(--red);
   outline: 2px solid var(--main-color);
-  color: #fff;
+  color: var(--white);
   /* width: calc(100% - 4px); */
 }
 
@@ -323,8 +328,8 @@ form label {
 
 form button {
   font-size: 2.3rem;
-  color: #fff;
-  background-color: #2b2b2b;
+  color: var(--white);
+  background-color: var(--dark-color);
   padding: 1.5rem;
   border: none;
   cursor: pointer;
@@ -336,6 +341,9 @@ textarea {
   font-size: 1.9rem;
   height: 13rem;
   width: 100%;
+  background-color: var(--white);
+  border: none;
+  box-shadow: inset 0 0 3px -1px #707070;
 }
 
 textarea:focus {
@@ -423,7 +431,7 @@ footer .logo {
 }
 
 .copyright {
-  color: #d5d5d5;
+  color: var(--white);
   margin-top: auto;
   font-size: 1.6rem;
 }
