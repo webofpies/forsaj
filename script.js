@@ -2,6 +2,7 @@ const prevRoomBtn = document.querySelector(".prev-room-btn");
 const nextRoomBtn = document.querySelector(".next-room-btn");
 const roomsList = document.querySelector(".rooms-list");
 const gamesContainer = document.querySelector(".games-container");
+const contactForm = document.querySelector(".contact-form");
 
 const games = [
   { sn: "ac-mirage", ln: "Assassin's Creed: Mirage" },
@@ -123,3 +124,15 @@ roomTexts.forEach((text, ind) => {
 });
 
 roomsList.appendChild(roomsFragment);
+
+// send to whatsapp
+function sendMessage(e) {
+  e.preventDefault();
+  const message = document.getElementById("message").value;
+  const url = `https://wa.me/+994709105090?text=${message}`;
+  window.open(url, "_blank").focus();
+}
+
+contactForm.addEventListener("submit", (e) => {
+  sendMessage(e);
+});
