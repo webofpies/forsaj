@@ -273,6 +273,56 @@ section {
   line-height: 1.5;
 }
 
+/* FEATURES */
+#features {
+  padding-block: 9.6rem;
+  background-color: var(--main-color);
+}
+
+.features-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 70%;
+  margin: 0 auto;
+  gap: 10rem;
+}
+
+.feature-name {
+  font-size: 3.6rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.feature-desc {
+  font-size: 2rem;
+}
+
+.feature-ps {
+  background: url("icons/playstation.svg");
+}
+.feature-atmosphere {
+  background: url("icons/armchair.svg");
+}
+.feature-games {
+  background: url("icons/controller.svg");
+}
+.feature-movies {
+  background: url("icons/film.svg");
+}
+
+.feature-icon {
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-color: var(--red);
+
+  width: 8.8rem;
+  height: 8.8rem;
+  padding: 1.2rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
 /* CONTACT FORM */
 #contact-us {
   scroll-margin-top: 0;
