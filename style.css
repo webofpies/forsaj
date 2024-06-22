@@ -185,6 +185,11 @@ section {
   transform: skew(-10deg, 0);
 }
 
+.game-fig {
+  width: 100%;
+  height: 100%;
+}
+
 .game img {
   width: 100%;
   height: 100%;
@@ -193,15 +198,31 @@ section {
 }
 
 /* ROOMS */
+#rooms {
+  --room-width: 70vw;
+}
+
+.rooms-box,
+.rooms-btn-parent {
+  max-width: var(--room-width);
+  margin: 0 auto;
+  aspect-ratio: 2;
+}
+
+.room-img {
+  width: var(--room-width);
+}
+
+.rooms-btn-parent {
+  position: relative;
+}
+
 .rooms-box {
   overflow: hidden;
-  max-width: 140rem;
-  margin: 0 auto;
 }
 
 .rooms-list {
   display: flex;
-  white-space: nowrap;
   width: max-content;
   transition: transform 0.5s ease-in-out;
 }
@@ -210,9 +231,10 @@ section {
   position: relative;
 }
 
-.room {
-  max-width: auto;
-  height: 70rem;
+.rooms-list,
+.room-fig,
+.room-img {
+  height: 100%;
 }
 
 .room-text {
@@ -244,13 +266,15 @@ section {
 }
 
 .prev-room-btn {
-  left: 15rem;
+  left: 0;
   background-image: url("icons/prev.svg");
+  transform: translate(-60%, -50%);
 }
 
 .next-room-btn {
-  right: 15rem;
+  right: 0;
   background-image: url("icons/next.svg");
+  transform: translate(60%, -50%);
 }
 
 .room-btn:hover {

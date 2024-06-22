@@ -65,9 +65,12 @@ gamesRows.forEach((row) => {
 
   row.forEach((game) => {
     const li = document.createElement("li");
+    const fig = document.createElement("figure");
     const img = document.createElement("img");
-    li.appendChild(img);
+    fig.append(img);
+    li.appendChild(fig);
     li.classList.add("game");
+    fig.classList.add("game-fig");
 
     img.src = `images/games/${game.sn}.jpg`;
     img.alt = game.ln;
@@ -111,12 +114,15 @@ const roomsFragment = document.createDocumentFragment();
 roomTexts.forEach((text, ind) => {
   const li = document.createElement("li");
   const img = document.createElement("img");
-  const txt = document.createElement("p");
-  li.append(img, txt);
+  const fig = document.createElement("figure");
+  const caption = document.createElement("figcaption");
+  fig.append(img, caption);
+  li.append(fig);
+  fig.classList.add("room-fig");
   li.classList.add("room-li");
-  img.classList.add("room");
-  txt.classList.add("room-text");
-  txt.textContent = text;
+  img.classList.add("room-img");
+  caption.classList.add("room-text");
+  caption.textContent = text;
 
   img.src = `images/rooms/${ind + 1}.png`;
 
