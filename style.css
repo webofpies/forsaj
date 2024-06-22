@@ -172,7 +172,7 @@ section {
   gap: 1rem;
   display: flex;
   flex-direction: column;
-  width: 2100px;
+  width: 210rem;
 }
 
 .game {
@@ -452,8 +452,8 @@ footer {
 
 .social-list img {
   display: block;
-  width: 28px;
-  height: 28px;
+  width: 2.8rem;
+  height: 2.8rem;
 }
 
 footer .logo {
