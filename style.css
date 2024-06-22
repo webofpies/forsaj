@@ -138,7 +138,7 @@ section {
 /* GAMES */
 #games {
   overflow-x: clip;
-  background: linear-gradient(#000 0%, var(--dark-color) 20%);
+  background: linear-gradient(#000 0, var(--dark-color) 20%);
 }
 
 .games-row {
@@ -154,13 +154,13 @@ section {
 
   background: linear-gradient(
     90deg,
-    var(--dark-color) 0%,
+    var(--dark-color) 0,
     rgba(0, 0, 0, 0) 30%,
     rgba(0, 0, 0, 0) 70%,
     var(--dark-color)
   );
 
-  box-shadow: 0 0px 47px 0px var(--dark-color);
+  box-shadow: 0 0 47px 0 var(--dark-color);
   z-index: 111;
   top: 0;
   left: 0;
@@ -358,7 +358,7 @@ section {
 
   grid-template-columns: 1fr 2fr;
   background-color: var(--main-color);
-  clip-path: polygon(0 0px, 100% 0%, 95% 100%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
 
   max-width: 60%;
   margin: 0 auto;
@@ -386,7 +386,7 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .contact-form {
