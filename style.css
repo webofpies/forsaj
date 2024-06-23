@@ -198,43 +198,33 @@ section {
 }
 
 /* ROOMS */
-#rooms {
-  --room-width: 70vw;
-}
-
-.rooms-box,
-.rooms-btn-parent {
-  max-width: var(--room-width);
+.rooms-container {
+  max-width: 70vw;
   margin: 0 auto;
-  aspect-ratio: 2;
-}
-
-.room-img {
-  width: var(--room-width);
-}
-
-.rooms-btn-parent {
   position: relative;
 }
 
-.rooms-box {
+.rooms-carousel-frame {
   overflow: hidden;
+  aspect-ratio: 2;
 }
 
 .rooms-list {
   display: flex;
-  width: max-content;
-  transition: transform 0.5s ease-in-out;
+  width: 400%;
+  height: 100%;
+  transition: transform 0.2s ease-out;
 }
 
-.room-li {
+.room-fig {
   position: relative;
 }
 
-.rooms-list,
+.room-li,
 .room-fig,
 .room-img {
-  height: 100%;
+  width: 100%;
+  height: inherit;
 }
 
 .room-text {
@@ -255,7 +245,7 @@ section {
   border: none;
   background-color: transparent;
   top: 50%;
-  transform: translateY(calc(50% - 12rem)); /*12rem is section top padding*/
+  transform: translateY(calc(50% - 16rem)); /*16rem is section top padding*/
   cursor: pointer;
 
   background-position: center;
