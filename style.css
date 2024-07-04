@@ -137,10 +137,19 @@ section {
 
 /* GAMES */
 #games {
-  overflow-x: clip;
-  background: linear-gradient(#000 0, var(--dark-color) 20%);
-
   --game-gap: 1rem;
+  background: linear-gradient(#000 0, var(--dark-color) 20%);
+}
+
+.games-container {
+  position: relative;
+  margin: 0 auto;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  width: min(100vw, 190rem);
+  overflow-x: clip;
 }
 
 .games-row {
@@ -189,14 +198,6 @@ section {
   top: 0;
   left: 0;
   pointer-events: none;
-}
-
-.games-container {
-  position: relative;
-  margin: 0 auto;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
 }
 
 .game {
