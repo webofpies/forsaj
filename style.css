@@ -221,7 +221,7 @@ section {
 
 @keyframes slide {
   from {
-    translate: -100% 0;
+    translate: calc(-100% - var(--game-gap)) 0;
   }
   to {
     translate: 0 0;
