@@ -83,13 +83,8 @@ gamesRows.forEach((row) => {
 
   gamesRow.appendChild(fragment);
 
-  // duplicate row (and put both rows in a container) for animation
   const duplicateRow = gamesRow.cloneNode(true);
-  const rowContainer = document.createElement("div");
-  rowContainer.classList.add("games-row-container");
-  rowContainer.append(gamesRow, duplicateRow);
-
-  gamesContainer.appendChild(rowContainer);
+  gamesContainer.append(gamesRow, duplicateRow);
 });
 
 // rooms
