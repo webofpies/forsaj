@@ -51,6 +51,8 @@ const games = [
   { sn: "trackmania-turbo", ln: "TrackMania Turbo" },
   { sn: "uncharted-4", ln: "Uncharted 4: A Thief's End" },
   { sn: "cyberpunk", ln: "Cyberpunk 2077" },
+  { sn: "crash-bandicoot-4", ln: "Crash Bandicoot 4: It's About Time" },
+  { sn: "riders-republic", ln: "Riders Republic" },
 ];
 
 // game cards
@@ -59,9 +61,9 @@ const gamesRows = Array.from({ length: 3 }, (_, i) => games.slice(i * size, i * 
 
 gamesRows.forEach((row) => {
   const fragment = document.createDocumentFragment();
-  const list = document.createElement("ul");
-  list.classList.add("games-row");
-  gamesContainer.appendChild(list);
+  const gamesRow = document.createElement("ul");
+  gamesRow.classList.add("games-row");
+  gamesContainer.appendChild(gamesRow);
 
   row.forEach((game) => {
     const li = document.createElement("li");
@@ -79,7 +81,15 @@ gamesRows.forEach((row) => {
     fragment.appendChild(li);
   });
 
-  list.appendChild(fragment);
+  gamesRow.appendChild(fragment);
+
+  // duplicate row (and put both rows in a container) for animation
+  const duplicateRow = gamesRow.cloneNode(true);
+  const rowContainer = document.createElement("div");
+  rowContainer.classList.add("games-row-container");
+  rowContainer.append(gamesRow, duplicateRow);
+
+  gamesContainer.appendChild(rowContainer);
 });
 
 // rooms

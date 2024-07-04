@@ -139,12 +139,35 @@ section {
 #games {
   overflow-x: clip;
   background: linear-gradient(#000 0, var(--dark-color) 20%);
+
+  --game-gap: 1rem;
 }
 
 .games-row {
-  display: grid;
-  grid-template-columns: repeat(13, 1fr);
-  gap: 1rem;
+  display: flex;
+  gap: var(--game-gap);
+
+  flex: 0 0 fit-content;
+
+  translate: -100% 0;
+  animation: slide linear infinite;
+}
+
+.games-row-container:nth-of-type(1) .games-row {
+  animation-duration: 35s;
+}
+
+.games-row-container:nth-of-type(2) .games-row {
+  animation-duration: 20s;
+}
+
+.games-row-container:nth-of-type(3) .games-row {
+  animation-duration: 25s;
+}
+
+.games-row-container {
+  display: flex;
+  gap: var(--game-gap);
 }
 
 .games-overlay {
@@ -172,15 +195,14 @@ section {
   gap: 1rem;
   display: flex;
   flex-direction: column;
-  width: 210rem;
 }
 
 .game {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 21rem;
+  width: 16rem;
+  aspect-ratio: 0.67;
   overflow: hidden;
   transform: skew(-10deg, 0);
 }
@@ -197,9 +219,18 @@ section {
   transform: skew(10deg, 0) scale(1.25);
 }
 
+@keyframes slide {
+  from {
+    translate: -100% 0;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
 /* ROOMS */
 .rooms-container {
-  max-width: 70vw;
+  max-width: min(190rem, 70vw);
   margin: 0 auto;
   position: relative;
 }
