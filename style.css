@@ -116,8 +116,10 @@ video {
 
 /* SECTION */
 section {
+  --section-padding: 16rem;
+
   scroll-margin-top: 9.6rem;
-  padding-top: 16rem;
+  padding-top: var(--section-padding);
   position: relative;
 }
 
@@ -130,8 +132,8 @@ section {
   position: absolute;
 
   left: 50%;
-  top: 4rem;
-  transform: translateX(-50%) rotate(-3deg);
+  top: var(--section-padding);
+  transform: translate(-50%, -75%) rotate(-3deg);
   z-index: 112;
 }
 
