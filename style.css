@@ -118,7 +118,7 @@ nav {
 video {
   display: block;
   width: 100%;
-  max-width: 120rem;
+  max-width: 160rem;
   max-height: calc(100vh - 9.6rem);
   background: var(--dark-color);
   margin-inline: auto;
