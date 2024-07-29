@@ -27,7 +27,14 @@ body {
   /* font-family: "Prompt"; */
   /* font-family: "Space Grotesk"; */
   font-family: "Blinker";
+
+  background-image: url(images/triangle.svg), url(images/circle.svg), url(images/cross.svg),
+    url(images/square.svg);
+  background-position: top 5% left -54%, top 30% right -86%, top 52% left -64%, top 87% right -68%;
+  background-repeat: no-repeat;
+  background-size: 65%;
   background-color: var(--dark-color);
+  background-blend-mode: soft-light;
 }
 
 a {
