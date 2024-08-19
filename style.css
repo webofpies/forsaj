@@ -309,7 +309,6 @@ section {
   border: none;
   background-color: transparent;
   top: 50%;
-  transform: translateY(calc(50% - 16rem)); /*16rem is section top padding*/
   cursor: pointer;
 
   background-position: center;
@@ -317,6 +316,8 @@ section {
   background-size: cover;
   width: clamp(5rem, 12vw, 17rem);
   height: clamp(5rem, 12vw, 17rem);
+
+  transition: filter 0.1s;
 }
 
 .prev-room-btn {
