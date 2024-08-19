@@ -324,12 +324,30 @@ section {
   left: 0;
   background-image: url("icons/prev.svg");
   transform: translate(-40%, -50%);
+  clip-path: polygon(
+    85.51% -7.41%,
+    18.57% 41.04%,
+    6.51% 76.98%,
+    88.46% 108.05%,
+    94% 76%,
+    43.62% 52.08%,
+    88.75% 25.13%
+  );
 }
 
 .next-room-btn {
   right: 0;
   background-image: url("icons/next.svg");
   transform: translate(40%, -50%);
+  clip-path: polygon(
+    19.74% -9.81%,
+    92.61% 23.15%,
+    84.77% 55.82%,
+    15.93% 109.14%,
+    12% 72.77%,
+    54.8% 47.72%,
+    4% 21.91%
+  );
 }
 
 .room-btn:hover {
