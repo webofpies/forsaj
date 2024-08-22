@@ -592,7 +592,7 @@ footer {
 }
 
 .logo-container .logo {
-  height: clamp(2.4rem, 5.9vw, 6.4rem);
+  height: clamp(2.4rem, 5.9vw, 5.5rem);
   margin-bottom: 1.2rem;
 }
 
@@ -603,8 +603,8 @@ footer {
 
 .social-list img {
   display: block;
-  width: clamp(2rem, 2vw, 2.8rem);
-  height: clamp(2rem, 2vw, 2.8rem);
+  width: clamp(2rem, 2vw, 2.5rem);
+  height: clamp(2rem, 2vw, 2.5rem);
 }
 
 /* recolor as #fab005*/
@@ -647,7 +647,7 @@ footer {
 .contacts-box {
   transform: skew(-10deg);
   background-color: var(--main-color);
-  padding: 3em 4em;
+  padding: 3em 7em;
   font-size: 1rem;
 }
 
