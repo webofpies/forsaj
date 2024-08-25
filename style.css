@@ -284,6 +284,7 @@ section {
 .room-li,
 .room-fig,
 .room-img {
+  display: block;
   width: 100%;
   height: auto;
 }
