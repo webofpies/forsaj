@@ -46,6 +46,10 @@ ul {
   list-style: none;
 }
 
+img {
+  display: block;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -431,6 +435,30 @@ section {
 .feature-atmosphere .feature-img-container,
 .feature-movies .feature-img-container {
   order: 2;
+}
+
+/* GALLERY */
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-inline: auto;
+  max-width: 90vw;
+  gap: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
 
 /* CONTACT FORM */
