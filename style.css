@@ -376,6 +376,10 @@ section {
 }
 
 /* FEATURES */
+#features {
+  padding-inline: 9.6rem;
+}
+
 .feature {
   display: grid;
   grid-template-columns: 1fr 1fr;
