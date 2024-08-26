@@ -396,7 +396,7 @@ section {
   color: var(--white);
   position: absolute;
   left: 4rem;
-  bottom: 3rem;
+  bottom: 2rem;
 }
 
 .feature-atmosphere .feature-label,
@@ -407,6 +407,7 @@ section {
 
 .feature-img-container {
   position: relative;
+  border-bottom: 6px solid var(--main-color);
 }
 
 .feature-img-container::before {
@@ -414,7 +415,7 @@ section {
   display: block;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #000000c4, #fff0 50%);
+  background: linear-gradient(0deg, #000000de, #fff0 50%);
   position: absolute;
 }
 
