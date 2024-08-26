@@ -293,10 +293,6 @@ section {
   height: auto;
 }
 
-.room-li {
-  margin-inline: 1rem; /* margin instead of gap on parent so scaling is from the center*/
-}
-
 .room-text {
   position: absolute;
   left: 50%;
@@ -328,7 +324,7 @@ section {
 .prev-room-btn {
   left: 0;
   background-image: url("icons/prev.svg");
-  transform: translate(-40%, -50%);
+  transform: translate(-50%, -50%);
   clip-path: polygon(
     85.51% -7.41%,
     18.57% 41.04%,
@@ -343,7 +339,7 @@ section {
 .next-room-btn {
   right: 0;
   background-image: url("icons/next.svg");
-  transform: translate(40%, -50%);
+  transform: translate(50%, -50%);
   clip-path: polygon(
     19.74% -9.81%,
     92.61% 23.15%,
