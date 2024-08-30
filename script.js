@@ -3,6 +3,7 @@ const nextRoomBtn = document.querySelector(".next-room-btn");
 const roomsList = document.querySelector(".rooms-list");
 const gamesContainer = document.querySelector(".games-container");
 const contactForm = document.querySelector(".contact-form");
+const heroSection = document.querySelector(".section-hero");
 
 // game cards
 const size = Math.ceil(games.length / 3);
@@ -85,3 +86,18 @@ function sendMessage(e) {
 contactForm.addEventListener("submit", (e) => {
   sendMessage(e);
 });
+
+//fixed header
+const obs = new IntersectionObserver(
+  function (entries) {
+    const entry = entries[0];
+    if (entry.isIntersecting) {
+      document.querySelector("header").classList.remove("fixed");
+    } else {
+      document.querySelector("header").classList.add("fixed");
+    }
+  },
+  { root: null, threshold: 0, rootMargin: "-96px" }
+);
+
+obs.observe(heroSection);
