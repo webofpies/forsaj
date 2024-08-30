@@ -1,6 +1,3 @@
-const prevRoomBtn = document.querySelector(".prev-room-btn");
-const nextRoomBtn = document.querySelector(".next-room-btn");
-const roomsList = document.querySelector(".rooms-list");
 const gamesContainer = document.querySelector(".games-container");
 const contactForm = document.querySelector(".contact-form");
 const heroSection = document.querySelector(".section-hero");
@@ -37,18 +34,11 @@ gamesRows.forEach((row) => {
   gamesContainer.append(gamesRow, duplicateRow);
 });
 
-// rooms
-let pct = 0;
-
-nextRoomBtn.addEventListener("click", () => {
-  pct += 25;
-  roomsList.style.transform = `translateX(-${pct}%)`;
-});
-
-prevRoomBtn.addEventListener("click", () => {
-  pct -= 25;
-  roomsList.style.transform = `translateX(-${pct}%)`;
-});
+// add room images
+const prevRoomBtn = document.querySelector(".prev-room-btn");
+const nextRoomBtn = document.querySelector(".next-room-btn");
+const roomsList = document.querySelector(".rooms-list");
+const roomsFrame = document.querySelector(".rooms-carousel-frame");
 
 const roomsFragment = document.createDocumentFragment();
 rooms.forEach((room) => {
@@ -74,6 +64,34 @@ rooms.forEach((room) => {
 });
 
 roomsList.appendChild(roomsFragment);
+
+// rooms slider
+let direction;
+
+nextRoomBtn.addEventListener("click", () => {
+  direction = -1;
+  roomsList.style.transform = `translateX(-25%)`;
+});
+
+prevRoomBtn.addEventListener("click", () => {
+  direction = 1;
+  roomsList.style.transform = `translateX(25%)`;
+});
+
+roomsList.addEventListener("transitionend", () => {
+  if (direction === -1) {
+    roomsList.appendChild(roomsList.firstElementChild);
+  }
+  if (direction === 1) {
+    roomsList.prepend(roomsList.lastElementChild);
+  }
+
+  roomsList.style.transition = "none";
+  roomsList.style.transform = `translateX(0)`;
+  setTimeout(() => {
+    roomsList.style.transition = "transform .2s ease-out";
+  });
+});
 
 // send to whatsapp
 function sendMessage(e) {

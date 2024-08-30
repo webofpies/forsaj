@@ -258,13 +258,15 @@ section {
 
 .rooms-carousel-frame {
   overflow: hidden;
-  /* aspect-ratio: 2; */
 }
 
 .rooms-list {
   display: flex;
   width: 400%;
   height: 100%;
+
+  translate: -25%; /*start from the second image so there's an image on both sides*/
+
   transition: transform 0.2s ease-out;
 }
 
