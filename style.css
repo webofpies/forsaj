@@ -164,7 +164,7 @@ section {
 
   position: relative;
 
-  width: min(100vw, 190rem);
+  width: min(100vw, 192rem);
   margin: 0 auto;
   overflow-x: clip;
 }
@@ -208,7 +208,7 @@ section {
     var(--dark-color)
   );
 
-  box-shadow: 0 0 47px 0 var(--dark-color);
+  /* box-shadow: 0 0 47px 0 var(--dark-color); */
   z-index: 111;
   top: 0;
   left: 0;
@@ -233,7 +233,8 @@ section {
 
 .game img {
   object-fit: cover;
-  transform: skew(10deg, 0) scale(1.25);
+  transform: skew(10deg, 0) scale(1.27);
+  transform-origin: top right;
 }
 
 @keyframes slide {
