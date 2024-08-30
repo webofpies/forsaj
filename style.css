@@ -251,7 +251,7 @@ section {
 
 /* ROOMS */
 .rooms-container {
-  max-width: min(120rem, 85vw);
+  max-width: min(140rem, 85vw);
   margin: 0 auto;
   position: relative;
 }
