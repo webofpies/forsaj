@@ -445,7 +445,7 @@ section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-inline: auto;
-  max-width: 90vw;
+  max-width: min(190rem, 90vw);
   gap: 1rem;
 }
 
