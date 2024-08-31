@@ -1,0 +1,27 @@
+@media screen and (max-width: 980px) {
+  #features {
+    display: grid;
+    grid-auto-rows: 1fr;
+    gap: 6.7rem;
+  }
+
+  .feature {
+    grid-template-columns: 1fr;
+    gap: 2.3rem;
+  }
+
+  .feature-atmosphere .feature-img-container,
+  .feature-movies .feature-img-container {
+    order: unset;
+  }
+
+  .feature-atmosphere .feature-label,
+  .feature-movies .feature-label {
+    right: unset;
+    left: 4rem;
+  }
+
+  #gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
