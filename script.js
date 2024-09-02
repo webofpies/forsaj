@@ -1,8 +1,5 @@
-const gamesContainer = document.querySelector(".games-container");
-const contactForm = document.querySelector(".contact-form");
-const heroSection = document.querySelector(".section-hero");
-
 // game cards
+const gamesContainer = document.querySelector(".games-container");
 const size = Math.ceil(games.length / 3);
 const gamesRows = Array.from({ length: 3 }, (_, i) => games.slice(i * size, i * size + size));
 
@@ -94,6 +91,8 @@ roomsList.addEventListener("transitionend", () => {
 });
 
 // send to whatsapp
+const contactForm = document.querySelector(".contact-form");
+
 function sendMessage(e) {
   e.preventDefault();
   const message = document.getElementById("message").value;
@@ -106,6 +105,8 @@ contactForm.addEventListener("submit", (e) => {
 });
 
 //fixed header
+const heroSection = document.querySelector(".section-hero");
+
 const obs = new IntersectionObserver(
   function (entries) {
     const entry = entries[0];
